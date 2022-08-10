@@ -18,6 +18,7 @@
     "sass": "^1.52.3"
   },
   "dependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "normalize.css": "^8.0.1"
   }
 }

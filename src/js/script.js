@@ -17,6 +17,7 @@ var slider = tns({
   })
 
 
+// tiny slider adaptive 
 //   var slider = tns({
 //     container: '.my-slider',
 //     items: 1,
