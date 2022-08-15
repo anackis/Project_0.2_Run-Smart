@@ -1,12 +1,14 @@
-// tiny slider 
-var slider = tns({
-	container: '.slider-section__inner',
-	items: 1,
-	slideBy: 'page',
-	autoplay: false,
-	controls: false,
-	nav: false
-  });
+$(document).ready(function() {
+
+	// tiny slider 
+	var slider = tns({
+		container: '.slider-section__inner',
+		items: 1,
+		slideBy: 'page',
+		autoplay: false,
+		controls: false,
+		nav: false
+	});
 
    // this script to make element as button for slider 
   document.querySelector('.next').addEventListener('click', function () {
@@ -28,47 +30,49 @@ var slider = tns({
   
   // Catalog LEARN MORE SCRIPT 
   // script that activate class=active 
-//   not optimizated 
-//   $('.catalog-item__link').each(function(i) {
-// 	  $(this).on('click', function(e) {
-// 		e.preventDefault();
-// 		$('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-// 		$('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-// 	  })
-//   });
- // Catalog back link SCRIPT 
-  // script that activate class=active 
-//   not optimizated 
-//   $('.catalog-item__back').each(function(i) {
-// 	$(this).on('click', function(e) {
-// 	  e.preventDefault();
-// 	  $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-// 	  $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-// 	})
-// });
+	//   not optimizated 
+	//   $('.catalog-item__link').each(function(i) {
+	// 	  $(this).on('click', function(e) {
+	// 		e.preventDefault();
+	// 		$('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+	// 		$('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+	// 	  })
+	//   });
+	// Catalog back link SCRIPT 
+	// script that activate class=active 
+	//   not optimizated 
+	//   $('.catalog-item__back').each(function(i) {
+	// 	$(this).on('click', function(e) {
+	// 	  e.preventDefault();
+	// 	  $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+	// 	  $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+	// 	})
+	// });
 
 
-function activate(item) {
-	$(item).each(function(i) {
-		$(this).on('click', function(e) {
-		  e.preventDefault();
-		  $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-		  $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-		})
-	});
-};
+  	 // Catalog LEARN MORE SCRIPT 
+  	// script that activate class=active 
+	//   optimizated !
+	function activate(item) {
+		$(item).each(function(i) {
+			$(this).on('click', function(e) {
+			e.preventDefault();
+			$('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+			$('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+			})
+		});
+	};
 
-activate('.catalog-item__link');
-activate('.catalog-item__back');
-
-
-
-
-
-
+	activate('.catalog-item__link');
+	activate('.catalog-item__back');
 
 
 
+
+
+
+
+});
 
 
 
