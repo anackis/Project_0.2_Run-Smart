@@ -68,6 +68,24 @@ $(document).ready(function() {
 
 
 
+	// when you click on button appiers modal window 
+	$('[data-modal="consultation"]').on('click', function() {
+		$('.overlay, #consultation').fadeIn('slow');
+	});
+	
+
+	$('.modal__close').on('click', function() {
+		$('.overlay, #consultation, #order, #thanks').fadeOut();
+	});
+
+
+
+
+
+
+
+
+
 
 
 

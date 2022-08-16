@@ -4,7 +4,7 @@
     height: 100%
     top: 0
     background-color: rgba(0,0,0, 0.56)
-
+    display: none
 .modal
     position: absolute
     left: 50%
@@ -18,8 +18,9 @@
         position: absolute
         height: 21px
         width: 21px
-        top: 10px
-        right: 10px
+        top: 13px
+        right: 11px
+        cursor: pointer
         span
             display: block
             height: 2px
@@ -30,4 +31,24 @@
                 transform: translateY(6px) rotate(-45deg)
             &:nth-child(2)
                 transform: translateY(4px) rotate(45deg)
-                
+    &__subtitle
+        margin-top: 38px
+        color: #0d0d0d
+        font-size: 19px
+        font-weight: 700
+        text-align: center
+    &__descr
+        margin-top: 11px
+        color: #0d0d0d
+        font-size: 14px
+        font-weight: 500
+        text-align: center
+    .feed-form
+        margin: 0 auto
+        margin-top: 25px
+    &_mini
+        min-height: 140px
+
+#consultation, #order , #thanks
+    display: none
+                        

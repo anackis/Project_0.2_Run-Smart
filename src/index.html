@@ -34,7 +34,7 @@
 			</div>
 			<div class="header__contacts">
 				<a href="tel:+77777777777" class="header__phone">+777 77777777</a>
-				<button class="button">Request a call</button>
+				<button data-modal="consultation" class="button">Request a call</button>
 			</div>
 		</div>
 		<div class="promo__wrapper">
@@ -54,7 +54,7 @@
 					<div class="promo__icon-text">We will answer <br> to all questions</div>
 				</div>
 			</div>
-			<button class="button button_main">order a CONSULTATION</button>
+			<button data-modal="consultation" class="button button_main">order a CONSULTATION</button>
 			<div class="promo__or">
 				<span>or</span>
 				<a href="#" class="promo__link">GO TO THE CATALOG</a>
@@ -470,7 +470,7 @@
 
 
 <div class="overlay">
-	<div class="modal">
+	<div class="modal" id="consultation">
 		<div class="modal__close">
 			<span></span>
 			<span></span>
@@ -483,6 +483,30 @@
 			<input name="enail" required placeholder="Your Email" type="email">
 			<button class="button button_main button_submit">order a CONSULTATION</button>
 		</form>
+	</div>
+
+	<div class="modal" id="order">
+		<div class="modal__close">
+			<span></span>
+			<span></span>
+		</div>
+		<div class="modal__subtitle">Your order:</div>
+		<div class="modal__descr">Polar FT1</div>
+		<form class="feed-form" action="#" class="form">
+			<input name="name" required placeholder="Your name" type="text">
+			<input name="phone" required placeholder="Your number" type="number">
+			<input name="enail" required placeholder="Your Email" type="email">
+			<button class="button button_main button_submit">Buy</button>
+		</form>
+	</div>
+
+	<div class="modal modal_mini" id="thanks">
+		<div class="modal__close">
+			<span></span>
+			<span></span>
+		</div>
+		<div class="modal__subtitle">Thank you for your order!</div>
+		<div class="modal__descr">Our manager will contact you soon!</div>
 	</div>
 </div>
 
