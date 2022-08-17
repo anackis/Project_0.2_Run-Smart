@@ -10,6 +10,23 @@ $(document).ready(function() {
 		nav: false
 	});
 
+
+	// tiny slider adaptive 
+	// var slider = tns({
+	// container: '.slider-section__inner',
+	// items: 1,
+	// responsive: {
+	// 	992: {
+	// 	fixedWidth: 100px
+		
+	// 	},
+	// 	700: {
+	// 	},
+	// 	900: {
+	// 	}
+	// }
+	// });
+
    // this script to make element as button for slider 
   document.querySelector('.next').addEventListener('click', function () {
 	slider.goTo('next');
@@ -74,15 +91,31 @@ $(document).ready(function() {
 	});
 	
 
+	// modal close button 
 	$('.modal__close').on('click', function() {
 		$('.overlay, #consultation, #order, #thanks').fadeOut();
 	});
 
 
+	// button buy in catalog 
+	// we do not need it because we put it next script below 
+	// $('.button_catalog').each(function(i) {
+	// 	$(this).on('click', function(e) {
+	// 		$('.overlay, #order').fadeIn('slow');
+	// 	})
+	// });
 
 
 
-
+	// script that take name of product from catalog and put it in modal window 
+	// as well we put part of top script here to activate  buy button 
+	$('.button_catalog').each(function(i) {
+		$(this).on('click', function() {
+			$('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+			$('.overlay, #order').fadeIn('slow');
+		});
+	});
+	
 
 
 
@@ -97,21 +130,3 @@ $(document).ready(function() {
 
 
 
-// tiny slider adaptive 
-//   var slider = tns({
-//     container: '.my-slider',
-//     items: 1,
-//     responsive: {
-//       640: {
-//         edgePadding: 20,
-//         gutter: 20,
-//         items: 2
-//       },
-//       700: {
-//         gutter: 30
-//       },
-//       900: {
-//         items: 3
-//       }
-//     }
-//   });
