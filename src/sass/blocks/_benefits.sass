@@ -11,6 +11,14 @@
     &__icon
         display: block
         margin: 0 auto
+        &_animated 
+            animation: heartbeat 2s ease infinite
+            // animation-name: heartbeat
+            // animation-duration: 2s
+            // animation-timing-function: ease
+            // animation-iteration-count: infinite
+            &:hover
+                animation-play-state: paused
     &__header
         margin-top: 38px
         color: #0d0d0d
@@ -26,3 +34,4 @@
         span
             a
                 color: $main-color
+    
