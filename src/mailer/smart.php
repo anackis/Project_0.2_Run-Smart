@@ -11,14 +11,14 @@ $mail->CharSet = 'utf-8';
 // $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+$mail->Host = 'mail.inbox.lv';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'alex.anackis.shigotoyomeru@gmail.com';                 // Наш логин
-$mail->Password = 'forhonor1234';                           // Наш пароль от ящика
+$mail->Username = 'araketsu@inbox.lv';                 // Наш логин
+$mail->Password = 'gU5r6MA9Wn';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('alex.anackis.shigotoyomeru@gmail.com', 'Pulse');   // От кого письмо 
+$mail->setFrom('araketsu@inbox.lv', 'Pulse');   // От кого письмо 
 $mail->addAddress('anackis@inbox.lv');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
